@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --blue: hsl(223, 87%, 63%);
+  --lightGray: hsl(223, 100%, 88%);
+  --red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --darkBlue: hsl(209, 33%, 12%);
+}
+body {
+  font-size: 20px;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 86px;
+}
+.logo {
+  margin-bottom: 60px;
+}
+h1 {
+  margin-bottom: 28px;
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--gray);
+}
+h1 span {
+  color: var(--darkBlue);
+}
+.text-main {
+  margin-bottom: 45px;
+  color: var(--darkBlue);
+}
+form {
+  width: 100%;
+  max-width: 637px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 94px;
+}
+.text-error {
+  max-height: 0;
+  overflow: hidden;
+}
+form input {
+  width: 100%;
+  max-width: 421px;
+  margin-right: 16px;
+  height: 56px;
+  border-radius: 100px;
+  border: 2px solid var(--lightGray);
+}
+form input:valid ~ .text-error {
+  max-height: 0;
+  overflow: hidden;
+}
+form input:invalid {
+  border: 2px solid var(--red);
+}
+form input:invalid ~ .text-error {
+  height: 100px;
+  max-height: 100px;
+  overflow: hidden;
+}
+form button {
+  width: 100%;
+  max-width: 200px;
+  height: 56px;
+  border-radius: 100px;
+  border: none;
+  background-color: var(--blue);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.144);
+}
+.illustration {
+  max-width: 640px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 72px;
+}
+.links {
+  display: flex;
+  margin-bottom: 28px;
+}
+.links a {
+  border: 2px solid rgba(0, 0, 0, 0.055);
+  width: 31px;
+  height: 31px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 13px;
+  text-decoration: none;
+  color: var(--blue);
+  border-radius: 100px;
+  font-size: 14px;
+}
+.links a:last-child {
+  margin: 0;
+}
+
+footer p {
+  color: var(--gray);
+  margin-bottom: 48px;
+  font-size: 12px;
+}
