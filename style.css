@@ -22,19 +22,20 @@ section {
   margin-top: 86px;
 }
 .logo {
-  margin-bottom: 60px;
+  margin-bottom: 48px;
 }
 h1 {
-  margin-bottom: 28px;
-  font-size: 40px;
+  margin-bottom: 18px;
+  font-size: 50px;
   font-weight: 300;
   color: var(--gray);
 }
 h1 span {
   color: var(--darkBlue);
+  font-weight: 700;
 }
 .text-main {
-  margin-bottom: 45px;
+  margin-bottom: 38px;
   color: var(--darkBlue);
 }
 form {
@@ -42,31 +43,43 @@ form {
   max-width: 637px;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 94px;
+  margin-bottom: 74px;
+  position: relative;
 }
 .text-error {
   max-height: 0;
   overflow: hidden;
+  font-size: 15px;
+  margin-left: 30px;
+  margin-top: 12px;
+  color: var(--red);
+  font-style: italic;
+  transition: all 0.5s;
 }
 form input {
   width: 100%;
+  font-size: 15px;
   max-width: 421px;
   margin-right: 16px;
   height: 56px;
   border-radius: 100px;
   border: 2px solid var(--lightGray);
+  padding-left: 30px;
 }
 form input:valid ~ .text-error {
   max-height: 0;
   overflow: hidden;
+  transition: all 0.5s;
 }
 form input:invalid {
   border: 2px solid var(--red);
+  transition: all 0.5s;
 }
 form input:invalid ~ .text-error {
   height: 100px;
   max-height: 100px;
   overflow: hidden;
+  transition: all 1s;
 }
 form button {
   width: 100%;
@@ -74,9 +87,12 @@ form button {
   height: 56px;
   border-radius: 100px;
   border: none;
+  font-family: "Libre Franklin", sans-serif;
+
   background-color: var(--blue);
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 16px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.144);
 }
 .illustration {
@@ -115,4 +131,38 @@ footer p {
   color: var(--gray);
   margin-bottom: 48px;
   font-size: 12px;
+}
+@media (max-width: 660px) {
+  section {
+    margin-right: 46px;
+    margin-left: 46px;
+  }
+  h1 {
+    text-align: center;
+  }
+  .text-main {
+    text-align: center;
+  }
+  .illustration {
+    width: 100%;
+  }
+  .text-error {
+    position: absolute;
+    margin-top: 65px;
+  }
+  form input {
+    margin: 0;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+  form input:valid {
+    margin-bottom: 10px;
+  }
+  form input:invalid {
+    margin-bottom: 42px;
+  }
+  form button {
+    max-width: 100%;
+    width: 100%;
+  }
 }
